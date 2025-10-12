@@ -1,0 +1,305 @@
+/* ===============================
+   Global Layout & Utilities
+=============================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===============================
+   Header
+=============================== */
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dff6;
+  padding: 1rem 0;
+}
+
+header img {
+  height: 70px;
+}
+
+header .btn-primary {
+  background-color: #4b3e82;
+  border: none;
+}
+
+header .btn-outline-primary {
+  color: #4b3e82;
+  border-color: #4b3e82;
+}
+
+header .btn-outline-primary:hover,
+header .btn-primary:hover {
+  background-color: #4b3e82;
+  color: #fff;
+}
+
+/* ===============================
+   Home Page Posts
+=============================== */
+
+.card {
+  border: 1px solid #d9d7ef;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card img {
+  object-fit: cover;
+  max-height: 200px;
+  border-radius: 10px 0 0 10px;
+}
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.card-title {
+  color: #4b3e82;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===============================
+   Dashboard Page
+=============================== */
+
+.dashboard-wrapper {
+  padding: 2rem 0;
+}
+
+.dashboard-form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-form label {
+  color: #4b3e82;
+  font-weight: 500;
+}
+
+.dashboard-form .btn-primary {
+  background-color: #4b3e82;
+  border: none;
+}
+
+.dashboard-form .btn-primary:active {
+  background-color: #3c3370;
+}
+
+.dashboard-form .form-check-label {
+  color: #4b3e82;
+  font-weight: 500;
+}
+
+.user-posts {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.user-posts .card {
+  border-left: 5px solid #4b3e82;
+}
+
+/* ===============================
+   Signup / Login Page
+=============================== */
+
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3f0ff, #e6e0ff);
+  padding: 1rem;
+}
+
+.signup-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.signup-card h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #4b3e82;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.signup-card .form-label {
+  font-weight: 500;
+  color: #4b3e82;
+}
+
+.signup-card .form-control {
+  border: 1px solid #c8c4e4;
+  border-radius: 8px;
+  padding: 0.7rem;
+}
+
+.signup-card .btn-primary {
+  background-color: #4b3e82;
+  border: none;
+}
+
+.signup-card .text-muted {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.signup-card .text-muted a {
+  color: #4b3e82;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-card .text-muted a:hover {
+  text-decoration: underline;
+}
+
+/* Error alert */
+#signup-error {
+  margin-top: 1rem;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+.btn-outline-secondary {
+  border-color: #4b3e82;
+  color: #4b3e82;
+  font-weight: 500;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: #4b3e82;
+  color: #fff;
+}
+/* Equal height buttons & hover effects */
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px; /* same height for both buttons */
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Sign Up / Log In hover */
+.btn-primary.btn-action:hover,
+.btn-primary.btn-action:focus {
+  background-color: #3c3370;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Back button hover */
+.btn-outline-secondary.btn-action:hover,
+.btn-outline-secondary.btn-action:focus {
+  background-color: #4b3e82;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ===============================
+   Notifications
+=============================== */
+
+.alert-success {
+  background-color: #e9f7ef;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.alert-danger {
+  background-color: #fdecea;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+/* ===============================
+   Footer
+=============================== */
+
+footer {
+  border-top: 1px solid #e0dff6;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #6c63a8;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .signup-card {
+    padding: 2rem 1.5rem;
+  }
+}
+/* Dashboard Buttons */
+#user-posts .buttons-container .btn {
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 5px; /* small rounding for consistency */
+  transition: all 0.2s ease;
+  min-width: 70px;
+  text-align: center;
+}
+
+/* Primary (Edit) */
+#user-posts .buttons-container .btn-primary {
+  background-color: #4b3e82;
+  border: none;
+  color: #fff;
+}
+
+#user-posts .buttons-container .btn-primary:hover {
+  background-color: #3c3370;
+}
+
+/* Danger (Delete) */
+#user-posts .buttons-container .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+}
+
+#user-posts .buttons-container .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Ensure vertical centering of buttons relative to the card */
+#user-posts .list-group-item {
+  display: flex;
+  align-items: center; /* vertical center */
+}

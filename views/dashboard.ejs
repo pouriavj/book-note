@@ -1,0 +1,192 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="container my-5">
+  <h2 class="mb-4">Dashboard</h2>
+
+  <!-- New Post Form -->
+  <div id="add-form-card" class="card mb-4">
+    <div class="card-header bg-primary text-white">
+      Add a New Book Note
+    </div>
+    <div class="card-body">
+
+      <!-- Error Message -->
+      <div id="dashboard-error" class="alert alert-danger <%= error ? '' : 'd-none' %>" role="alert">
+        <%= error %>
+      </div>
+
+      <form id="new-post-form" action="/dashboard/post" method="POST">
+        <div class="mb-3">
+          <label for="bookTitle" class="form-label">Book Title</label>
+          <input type="text" class="form-control" id="bookTitle" name="title" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="bookAuthor" class="form-label">Author</label>
+          <input type="text" class="form-control" id="bookAuthor" name="author" placeholder="Author name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="bookNotes" class="form-label">Your Notes</label>
+          <textarea class="form-control" id="bookNotes" name="notes" rows="4" required></textarea>
+        </div>
+
+        <!-- Flex container for Rating and Auto-cover -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="d-flex align-items-center">
+            <label for="bookRating" class="form-label me-2 mb-0">Rating</label>
+            <select class="form-select form-select-sm" id="bookRating" name="rating" required style="width:80px;">
+              <option value="" disabled selected>⭐</option>
+              <option value="1">1 ⭐</option>
+              <option value="2">2 ⭐</option>
+              <option value="3">3 ⭐</option>
+              <option value="4">4 ⭐</option>
+              <option value="5">5 ⭐</option>
+            </select>
+          </div>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="autoCover" name="autoCover" value="yes">
+            <label class="form-check-label" for="autoCover">
+              Auto-generate cover based on the book title
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Add Post</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Post Form (Hidden initially) -->
+  <div id="edit-form-card" class="card mb-4 d-none">
+    <div class="card-header bg-warning text-dark">
+      Edit Book Note
+    </div>
+    <div class="card-body">
+      <form id="edit-post-form" method="POST">
+        <div class="mb-3">
+          <label for="editTitle" class="form-label">Book Title</label>
+          <input type="text" class="form-control" id="editTitle" name="title" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="editAuthor" class="form-label">Author</label>
+          <input type="text" class="form-control" id="editAuthor" name="author" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="editNotes" class="form-label">Your Notes</label>
+          <textarea class="form-control" id="editNotes" name="notes" rows="4" required></textarea>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="d-flex align-items-center">
+            <label for="editRating" class="form-label me-2 mb-0">Rating</label>
+            <select class="form-select form-select-sm" id="editRating" name="rating" required style="width:80px;">
+              <option value="1">1 ⭐</option>
+              <option value="2">2 ⭐</option>
+              <option value="3">3 ⭐</option>
+              <option value="4">4 ⭐</option>
+              <option value="5">5 ⭐</option>
+            </select>
+          </div>
+
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="editAutoCover" name="autoCover" value="yes">
+            <label class="form-check-label" for="editAutoCover">
+              Auto-generate cover based on the book title
+            </label>
+          </div>
+        </div>
+
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-warning">Save Changes</button>
+          <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- User Posts -->
+<h4>Your Previous Posts</h4>
+<div class="list-group" id="user-posts">
+  <% if (locals.posts && locals.posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+      <div class="list-group-item mb-3 d-flex align-items-center position-relative gap-3">
+        
+        <!-- Small Cover -->
+        <% if(post.cover) { %>
+          <img src="<%= post.cover %>" alt="Cover" style="width:60px; height:90px; object-fit:cover; border-radius:4px;">
+        <% } else { %>
+            <img src="assets/icons/noCover.png" alt="Cover" style="width:60px; height:90px; object-fit:cover; border-radius:4px;">
+        <% } %>
+        
+        <div class="flex-grow-1">
+          <h5 class="mb-1"><%= post.title %></h5>
+          <% if(post.author) { %>
+            <p class="mb-1"><strong>Author:</strong> <%= post.author %></p>
+          <% } %>
+          <p class="mb-1"><%= post.notes.split(' ').slice(0,10).join(' ') %>...</p>
+          <small>Rating: <%= post.rating %> ⭐</small>
+          <% if(post.createdAt) { %>
+            <br><small class="text-muted">Created on: <%= new Date(post.createdAt).toLocaleDateString() %></small>
+          <% } %>
+        </div>
+
+        <!-- Buttons: vertically centered -->
+        <div class="d-flex flex-column gap-2 align-items-end buttons-container">
+          <button 
+            class="btn btn-sm btn-primary edit-btn" 
+            data-id="<%= post.id %>" 
+            data-title="<%= post.title %>" 
+            data-author="<%= post.author %>" 
+            data-notes="<%= post.notes %>" 
+            data-rating="<%= post.rating %>">
+            Edit
+          </button>
+          <form action="/dashboard/delete/<%= post.id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this post?');">
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+          </form>
+        </div>
+
+      </div>
+    <% }) %>
+  <% } else { %>
+    <p class="text-muted">You have no posts yet.</p>
+  <% } %>
+</div>
+
+
+<script>
+  const editButtons = document.querySelectorAll('.edit-btn');
+  const addFormCard = document.getElementById('add-form-card');
+  const editFormCard = document.getElementById('edit-form-card');
+  const editForm = document.getElementById('edit-post-form');
+
+  editButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      addFormCard.classList.add('d-none');
+      editFormCard.classList.remove('d-none');
+
+      // Fill the form with post data
+      document.getElementById('editTitle').value = btn.dataset.title;
+      document.getElementById('editAuthor').value = btn.dataset.author;
+      document.getElementById('editNotes').value = btn.dataset.notes;
+      document.getElementById('editRating').value = btn.dataset.rating;
+
+      editForm.action = `/dashboard/edit/${btn.dataset.id}`;
+
+      // Scroll to form
+      editFormCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Cancel Edit
+  document.getElementById('cancelEdit').addEventListener('click', () => {
+    editFormCard.classList.add('d-none');
+    addFormCard.classList.remove('d-none');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<%- include('partials/footer.ejs'); -%>
