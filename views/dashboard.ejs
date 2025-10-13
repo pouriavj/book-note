@@ -128,9 +128,10 @@
           <% } %>
           <p class="mb-1"><%= post.notes.split(' ').slice(0,10).join(' ') %>...</p>
           <small>Rating: <%= post.rating %> ⭐</small>
-          <% if(post.createdAt) { %>
-            <br><small class="text-muted">Created on: <%= new Date(post.createdAt).toLocaleDateString() %></small>
+          <% if(post.created_at) { %>
+          <br><small class="text-muted"><%= post.created_at %></small>
           <% } %>
+
         </div>
 
         <!-- Buttons: vertically centered -->

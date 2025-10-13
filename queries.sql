@@ -13,3 +13,14 @@ CREATE TABLE posts(
 	cover TEXT,
 	user_id INT NOT NULL
 );
+--Do these alters inside the CREATE--
+ALTER TABLE posts
+ADD created_at TEXT
+
+ALTER TABLE posts
+ADD UNIQUE (title, author, user_id)
+
+ALTER TABLE posts
+ADD FOREIGN KEY (user_id) REFERENCES register(id);
+
+ALTER TABLE posts DROP CONSTRAINT posts_title_key;
