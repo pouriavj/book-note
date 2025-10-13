@@ -2,17 +2,17 @@ import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
 import pg from "pg";
-import { title } from "process";
+
 
 const app = express();
 const port = 3000;
 const API_URL = "https://bookcover.longitood.com/bookcover";
 
 const db = new pg.Client({
-  user: "postgres",
+  user: "your-username-here",
   host: "localhost",
-  database: "bookNote",
-  password: "61516151",
+  database: "your-database-here",
+  password: "your-password-here",
   port: 5432,
 });
 db.connect();
