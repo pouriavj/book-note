@@ -45,6 +45,17 @@ header .btn-primary:hover {
 .site-logo:hover {
   transform: scale(1.05); /* subtle hover effect */
 }
+/* Signup Button Hover Lift Effect */
+.btn-primary {
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #3c3370; /* slightly darker purple */
+  transform: translateY(-2px); /* subtle lift */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* gentle shadow */
+}
 
 @media (max-width: 768px) {
   .site-logo {

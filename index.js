@@ -61,7 +61,7 @@ if(userAuth){
   res.render("index.ejs", {
     success: successMessage,
     posts: result.rows,
-    caption: "The Latest from Our Writers",
+    caption: "The Latest Book Notes From Our Writers",
     sortOption: currentSort,
   });
   successMessage = false;
