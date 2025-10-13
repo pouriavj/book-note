@@ -114,8 +114,6 @@ if(userAuth){
 }  
 
 }
-
-
 });
 
 app.get("/rating", async (req, res) => {

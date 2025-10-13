@@ -1,6 +1,4 @@
-/* ===============================
-   Global Layout & Utilities
-=============================== */
+/* Global */
 
 .container {
   max-width: 1200px;
@@ -8,9 +6,7 @@
   padding: 0 1rem;
 }
 
-/* ===============================
-   Header
-=============================== */
+/* Header */
 
 header {
   background-color: #ffffff;
@@ -38,34 +34,32 @@ header .btn-primary:hover {
   color: #fff;
 }
 .site-logo {
-  height: 110px;       /* default size */
+  height: 110px;       
   transition: transform 0.2s ease;
 }
 
 .site-logo:hover {
-  transform: scale(1.05); /* subtle hover effect */
+  transform: scale(1.05); 
 }
-/* Signup Button Hover Lift Effect */
+
 .btn-primary {
   transition: all 0.25s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #3c3370; /* slightly darker purple */
-  transform: translateY(-2px); /* subtle lift */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* gentle shadow */
+  background-color: #3c3370; 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
 
 @media (max-width: 768px) {
   .site-logo {
-    height: 85px; /* smaller on mobile */
+    height: 85px; 
   }
 }
 
-/* ===============================
-   Home Page Posts
-=============================== */
+/* Home Page */
 
 .card {
   border: 1px solid #d9d7ef;
@@ -114,9 +108,7 @@ header .btn-primary:hover {
   margin-bottom: 0.3rem;
 }
 
-/* ===============================
-   Dashboard Page
-=============================== */
+/* Dashboard Page */
 
 .dashboard-wrapper {
   padding: 2rem 0;
@@ -158,9 +150,7 @@ header .btn-primary:hover {
   border-left: 5px solid #4b3e82;
 }
 
-/* ===============================
-   Signup / Login Page
-=============================== */
+/* Signup / Login Page */
 
 .signup-wrapper {
   display: flex;
@@ -236,17 +226,17 @@ header .btn-primary:hover {
   background-color: #4b3e82;
   color: #fff;
 }
-/* Equal height buttons & hover effects */
+
 .btn-action {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45px; /* same height for both buttons */
+  height: 45px; 
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
-/* Sign Up / Log In hover */
+
 .btn-primary.btn-action:hover,
 .btn-primary.btn-action:focus {
   background-color: #3c3370;
@@ -254,7 +244,7 @@ header .btn-primary:hover {
   transform: translateY(-1px);
 }
 
-/* Back button hover */
+
 .btn-outline-secondary.btn-action:hover,
 .btn-outline-secondary.btn-action:focus {
   background-color: #4b3e82;
@@ -262,9 +252,7 @@ header .btn-primary:hover {
   transform: translateY(-1px);
 }
 
-/* ===============================
-   Notifications
-=============================== */
+/* Notifications */
 
 .alert-success {
   background-color: #e9f7ef;
@@ -278,9 +266,7 @@ header .btn-primary:hover {
   border: 1px solid #ef9a9a;
 }
 
-/* ===============================
-   Footer
-=============================== */
+/* Footer */
 
 footer {
   border-top: 1px solid #e0dff6;
@@ -289,7 +275,7 @@ footer {
   color: #6c63a8;
   font-size: 0.9rem;
 }
-/* ---------- Footer Styling ---------- */
+
 
 .footerNote {
   font-size: 0.95rem;
@@ -297,7 +283,7 @@ footer {
   margin: 0;
 }
 
-/* Shared icon base style */
+/* icon */
 .github,
 .linkedin {
   width: 26px;
@@ -307,14 +293,14 @@ footer {
   filter: grayscale(40%);
 }
 
-/* GitHub hover: subtle dark tone */
+
 .github:hover {
   transform: scale(1.15) translateY(-3px);
   filter: grayscale(0%);
   opacity: 1;
 }
 
-/* LinkedIn hover: blue highlight */
+
 .linkedin:hover {
   transform: scale(1.15) translateY(-3px);
   filter: grayscale(0%);
@@ -322,7 +308,7 @@ footer {
   box-shadow: 0 0 6px rgba(10, 102, 194, 0.4);
 }
 
-/* Footer alignment tweaks */
+
 footer .d-flex {
   align-items: center;
 }
@@ -337,9 +323,6 @@ footer .d-flex {
   }
 }
 
-/* ===============================
-   Responsive
-=============================== */
 
 @media (max-width: 768px) {
   .card {
@@ -356,17 +339,17 @@ footer .d-flex {
     padding: 2rem 1.5rem;
   }
 }
-/* Dashboard Buttons */
+
 #user-posts .buttons-container .btn {
   font-size: 0.85rem;
   padding: 4px 12px;
-  border-radius: 5px; /* small rounding for consistency */
+  border-radius: 5px; 
   transition: all 0.2s ease;
   min-width: 70px;
   text-align: center;
 }
 
-/* Primary (Edit) */
+/* Edit */
 #user-posts .buttons-container .btn-primary {
   background-color: #4b3e82;
   border: none;
@@ -377,7 +360,7 @@ footer .d-flex {
   background-color: #3c3370;
 }
 
-/* Danger (Delete) */
+/* Delete */
 #user-posts .buttons-container .btn-danger {
   background-color: #dc3545;
   border: none;
@@ -388,8 +371,8 @@ footer .d-flex {
   background-color: #c82333;
 }
 
-/* Ensure vertical centering of buttons relative to the card */
+
 #user-posts .list-group-item {
   display: flex;
-  align-items: center; /* vertical center */
+  align-items: center; 
 }

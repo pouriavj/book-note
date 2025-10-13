@@ -11,20 +11,24 @@
           <div class="col-md-10">
             <div class="d-flex justify-content-between align-items-center pb-4 mb-4 border-bottom">
               <% if (locals.caption){ %>
-    <h3 class="fst-italic mb-0"><%= caption %></h3>
-  <% } %>
-   <% if (locals.sortOption) {%>             
-  <div class="dropdown" style="margin-left:auto;">
-    
-    <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="min-width:120px;">
-      <%= sortOption %>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sortDropdown" style="min-width:120px;">
-      <li><a class="dropdown-item" href="/rating">By Rating <i class="bi bi-star-fill"></i></a></li>
-      <li><a class="dropdown-item" href="/date">By Date <i class="bi bi-calendar-event"></i></a></li>
-    </ul>
-  </div>
-  <% } %>
+                <h3 class="fst-italic mb-0">
+                  <%= caption %>
+                </h3>
+                <% } %>
+                  <% if (locals.sortOption) {%>
+                    <div class="dropdown" style="margin-left:auto;">
+
+                      <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="sortDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false" style="min-width:120px;">
+                        <%= sortOption %>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sortDropdown"
+                        style="min-width:120px;">
+                        <li><a class="dropdown-item" href="/rating">By Rating <i class="bi bi-star-fill"></i></a></li>
+                        <li><a class="dropdown-item" href="/date">By Date <i class="bi bi-calendar-event"></i></a></li>
+                      </ul>
+                    </div>
+                    <% } %>
             </div>
 
             <% if (locals.posts && locals.posts.length> 0) { %>
@@ -115,9 +119,9 @@
     const successDiv = document.getElementById('success-notification');
     if (successDiv) {
       setTimeout(() => {
-        successDiv.classList.remove('show'); // fades out
-        successDiv.classList.add('d-none');  // hides completely, no space
-      }, 6000); // 6 seconds
+        successDiv.classList.remove('show'); 
+        successDiv.classList.add('d-none');  
+      }, 6000); 
     }
   </script>
 
