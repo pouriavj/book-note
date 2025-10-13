@@ -6,21 +6,13 @@ CREATE TABLE register(
 
 CREATE TABLE posts(
 	id SERIAL PRIMARY KEY,
-	title VARCHAR(80) UNIQUE NOT NULL CHECK (length(btrim(title)) > 0),
+	title VARCHAR(80) NOT NULL CHECK (length(btrim(title)) > 0),
 	author VARCHAR(50) NOT NULL CHECK (length(btrim(author)) > 0),
 	notes TEXT NOT NULL CHECK (length(btrim(notes)) > 0),
 	rating TEXT NOT NULL,
 	cover TEXT,
-	user_id INT NOT NULL
+	user_id INT NOT NULL REFERENCES register(id),
+	created_at TEXT,
+	UNIQUE (title, author, user_id)
 );
---Do these alters inside the CREATE--
-ALTER TABLE posts
-ADD created_at TEXT
 
-ALTER TABLE posts
-ADD UNIQUE (title, author, user_id)
-
-ALTER TABLE posts
-ADD FOREIGN KEY (user_id) REFERENCES register(id);
-
-ALTER TABLE posts DROP CONSTRAINT posts_title_key;
