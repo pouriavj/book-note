@@ -146,7 +146,7 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ---
 
-## 🧑‍💻 Author
+## ✍️ Author
 
 Developed with ❤️ by **Pouria**
 
