@@ -1,30 +1,34 @@
-# Book Note
+# 📚 Book Note
 
-Book Note is a web application where users can sign up, log in, and share their personal reviews, ratings, and notes on different books. Each post can include an automatically generated book cover fetched from an external API, making every entry unique and visually appealing. Users can manage all their posts in a private dashboard, while the public home page displays posts from everyone in the community.
+**Book Note** is a web application where users can **sign up**, **log in**, and **share their personal reviews, ratings, and notes** on different books.  
+Each post can include an **automatically generated book cover** fetched from an external API, making every entry visually engaging.  
+Users manage their posts in a private **dashboard**, while the public home page displays book notes from all members of the community.
 
 ---
 
 ## 🧠 Description
 
-Book Note allows readers to easily document and share their thoughts on books they’ve read. When creating a post, users can check the **auto-generate** option — the app will automatically fetch a book cover using the title and author via the [BookCover API](https://bookcover.longitood.com/bookcover).  
-If the user leaves this option unchecked, the site displays a **default simple book cover** (without a specific author or title) for that post instead.  
+**Book Note** lets readers easily document and share their reflections on books they’ve read.  
+When creating a post, users can check the **Auto-Generate Cover** option — the app will automatically fetch a book cover using the **title** and **author** via the [BookCover API](https://bookcover.longitood.com/bookcover).  
+If the user leaves this option **unchecked**, the site will display a **default, simple book cover** (with no specific title or author) for that post instead.
 
-It uses **PostgreSQL** to store user accounts and posts securely, with strong validation and detailed error handling for incorrect or duplicate data. The app also includes **success notifications**, a **rating and date sorting system**, and smooth user experience design powered by **Bootstrap 5** and **custom CSS**.  
+The app uses **PostgreSQL** to store user accounts and book notes securely, with **strong validation** and **detailed error handling** for incorrect or duplicate entries.  
+It also includes **success notifications**, a **sorting system** by rating or date, and a clean, responsive design built with **Bootstrap 5** and **CSS**.  
 
-The site adapts dynamically — logged-in users see only their own posts on the home page (without usernames), while visitors see posts from all users with usernames and ratings visible.  
+When logged in, users see **only their own posts** (without usernames). Visitors see **all users’ posts** — complete with names, ratings, and notes.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 Secure authentication (Sign Up / Log In)
-- 🧾 Create, edit, or delete your book notes in a dashboard  
-- 🌆 Auto-generate book covers via API or use default cover  
-- 💬 View all users’ posts or just your own when logged in  
-- ⭐ Sort posts by **rating** or **date**  
-- ✅ Success and error notifications  
-- 🖋️ Responsive layout built with **Bootstrap + custom CSS**  
-- 🧱 Default book cover when auto-cover is disabled  
+- 🔐 Secure authentication (**Sign Up / Log In**)  
+- 🧾 Create, edit, and delete book notes from your **dashboard**  
+- 🌆 **Auto-generate book covers** or use a **default cover**  
+- 💬 Public feed shows all users’ posts  
+- ⭐ Sort posts by **Rating** or **Date**  
+- ✅ Clear success and error notifications  
+- 🎨 Modern UI built with **Bootstrap 5 + CSS**  
+- 🧱 Default placeholder cover when API generation is disabled  
 
 ---
 
@@ -32,30 +36,30 @@ The site adapts dynamically — logged-in users see only their own posts on the 
 
 | Technology     | Use |
 |----------------|-----|
-| Node.js        | Backend runtime |
-| Express.js     | Web framework for routing |
-| PostgreSQL     | Database for storing users and posts |
-| EJS            | Server-side templating |
-| Axios          | Fetching auto-generated book covers from API |
-| Bootstrap 5    | Layout and responsive styling |
-| Custom CSS     | Additional UI design and animations |
+| **Node.js**        | Backend runtime |
+| **Express.js**     | Web framework for routing |
+| **PostgreSQL**     | Database for storing users and posts |
+| **EJS**            | Server-side templating engine |
+| **Axios**          | Fetching auto-generated book covers from API |
+| **Bootstrap 5**    | Layout and responsive styling |
+| **CSS**            | Custom design and visual effects |
 
 ---
 
 ## 💡 How It Works
 
-1. Users sign up or log in to access their personal dashboard.  
-2. They can create a new book note with **title**, **author**, **rating**, and **notes**.  
-3. Checking the **auto-generate cover** option fetches a matching image from the API.  
-4. Leaving it unchecked uses the **default book cover** instead.  
-5. Posts appear on the home page — either all users’ posts or only the user’s own, depending on login status.  
-6. Posts can be sorted by rating or date for easier browsing.  
+1. Users **sign up or log in** to access their personal dashboard.  
+2. They can create a new **book note** with a title, author, rating, and personal notes.  
+3. Checking **Auto-Generate Cover** fetches a matching image from the BookCover API.  
+4. Leaving it unchecked applies the **default cover**.  
+5. Posts appear on the home page — filtered by **login status**.  
+6. Users can **sort posts** by rating or date for easier browsing.
 
 ---
 
 ## 📸 Preview
 
-_(You can include screenshots or a short GIF of your app running here)_
+_(Add screenshots or a GIF of your site in action here.)_
 
 ---
 
