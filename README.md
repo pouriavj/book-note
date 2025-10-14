@@ -15,7 +15,7 @@ If the user leaves this option **unchecked**, the site will display a **default,
 The app uses **PostgreSQL** to store user accounts and book notes securely, with **strong validation** and **detailed error handling** for incorrect or duplicate entries.  
 It also includes **success notifications**, a **sorting system** by rating or date, and a clean, responsive design built with **Bootstrap 5** and **CSS**.  
 
-When logged in, users see **only their own posts** (without usernames). Visitors see **all users’ posts** — complete with names, ratings, and notes.
+Logged-in users can manage and view their own posts, while visitors can explore all shared book notes with each author’s name, rating, and review.
 
 ---
 
