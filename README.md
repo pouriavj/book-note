@@ -6,7 +6,7 @@ Users manage their posts in a private **dashboard**, while the public home page 
 
 ---
 
-## 🧠 Description
+## 📘 Description
 
 **Book Note** lets readers easily document and share their reflections on books they’ve read.  
 When creating a post, users can check the **Auto-Generate Cover** option — the app will automatically fetch a book cover using the **title** and **author** via the [BookCover API](https://bookcover.longitood.com/bookcover).  
@@ -128,7 +128,7 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ---
 
-🚀 Learning Highlights
+🧠 Learning Highlights
 - Built a full-stack Node.js app with Express and PostgreSQL.  
 - Integrated external APIs using Axios for dynamic content.  
 - Improved error handling, input validation, and database operations.  
