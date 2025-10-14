@@ -148,8 +148,7 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ## ✍️ Author
 
-Developed with ❤️ by **Pouria**
-
+[Pouria VJ](https://github.com/pouriavj)
 ---
 
 ## 🪪 License
