@@ -142,6 +142,6 @@ Posts appear on the home page (filtered by login status) and can be sorted by ra
 
 ---
 
-## 🪪 License
+## 📜 License
 
 This project is open-source and available under the **MIT License**.
