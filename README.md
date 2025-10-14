@@ -1,40 +1,67 @@
 # Book Note
 
-Book Note is a platform where users can sign up, log in, and share their reviews, ratings, and notes on different books. Users can create, edit, or delete notes from the dashboard, and optionally auto-generate book covers using an external API. The site displays all users’ posts on the home page, and when logged in, users see only their own posts. The website uses Bootstrap with custom CSS for a clean, modern, and user-friendly design.
+Book Note is a web application where users can sign up, log in, and share their personal reviews, ratings, and notes on different books. Each post can include an automatically generated book cover fetched from an external API, making every entry unique and visually appealing. Users can manage all their posts in a private dashboard, while the public home page displays posts from everyone in the community.
 
 ---
 
-## Features
+## 🧠 Description
 
-- Sign up and log in to manage your book notes.
-- Create, edit, and delete posts in your dashboard.
-- Auto-generate book covers by providing the title and author.
-- Display posts from all users on the home page, with ratings and notes.
-- Sort posts by rating or date.
-- Success and error notifications for better UX.
-- Responsive and visually appealing design using Bootstrap + custom CSS.
+Book Note allows readers to easily document and share their thoughts on books they’ve read. When creating a post, users can either upload their own book cover or check the **auto-generate** option — the app will automatically fetch a cover using the title and author via the [BookCover API](https://bookcover.longitood.com/bookcover).  
+It uses **PostgreSQL** to store user accounts and posts securely, with strong validation and detailed error handling for incorrect or duplicate data. The app also includes **success notifications**, a **rating and date sorting system**, and smooth user experience design powered by **Bootstrap 5** and **custom CSS**.  
+
+The site adapts dynamically — logged-in users see only their own posts on the home page (without usernames), while visitors see posts from all users with usernames and ratings visible.  
 
 ---
 
-## Tech Stack
+## 🚀 Features
 
-| Technology       | Purpose                                           |
-|-----------------|---------------------------------------------------|
-| Node.js         | Backend server                                   |
-| Express.js      | Routing and server framework                      |
-| PostgreSQL      | Database for users and posts                      |
-| Axios           | Fetch book cover images from external API        |
-| EJS             | Server-side templating                            |
-| Bootstrap 5     | Responsive design and layout                      |
-| Custom CSS      | Custom styling and design enhancements           |
+- 🔐 Secure authentication (Sign Up / Log In)
+- 🧾 Create, edit, or delete your book notes in a dashboard  
+- 🌆 Auto-generate book covers via API  
+- 💬 View all users’ posts or just your own when logged in  
+- ⭐ Sort posts by **rating** or **date**  
+- ✅ Success and error notifications  
+- 🖋️ Responsive layout built with **Bootstrap + custom CSS**  
+- 🧱 Default book cover when auto-cover is disabled  
 
 ---
 
-## How It Works
+## 🛠️ Tech Stack
 
-1. Users sign up or log in to access the dashboard.
-2. On the dashboard, they can add a book note with title, author, rating, and personal notes.
-3. If the auto-generate cover option is selected, the website fetches a book cover from the API based on the title and author.
-4. Users can edit or delete their posts at any time.
-5. On the home page, all posts are displayed with ratings, notes, and the author’s name. Logged-in users see only their posts.
-6. Posts can be sorted by rating or date for easy navigation.
+| Technology     | Use |
+|----------------|-----|
+| Node.js        | Backend runtime |
+| Express.js     | Web framework for routing |
+| PostgreSQL     | Database for storing users and posts |
+| EJS            | Server-side templating |
+| Axios          | Fetching auto-generated book covers from API |
+| Bootstrap 5    | Layout and responsive styling |
+| Custom CSS     | Additional UI design and animations |
+
+---
+
+## 💡 How It Works
+
+1. Users sign up or log in to access their personal dashboard.  
+2. They can create a new book note with **title**, **author**, **rating**, and **notes**.  
+3. Checking the **auto-generate cover** option fetches a matching image from the API.  
+4. Posts appear on the home page — either all users’ posts or only the user’s own, depending on login status.  
+5. Posts can be sorted by rating or date for easier browsing.  
+
+---
+
+## 📸 Preview
+
+_(You can include screenshots or a short GIF of your app running here)_
+
+---
+
+## 🧑‍💻 Author
+
+Developed with ❤️ by **Pouria**  
+
+---
+
+## 🪪 License
+
+This project is open-source and available under the **MIT License**.
