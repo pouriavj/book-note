@@ -66,8 +66,8 @@ Logged-in users can manage and view their own posts, while visitors can explore 
    ```
 3. **Create a PostgreSQL database:**
    ```sql
-   CREATE DATABASE booknote;
-      \c booknote
+   	CREATE DATABASE booknote;
+      	\c booknote
    
    	-- Create SQL Tables --
    	CREATE TABLE register(
