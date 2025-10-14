@@ -40,15 +40,9 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ## 🛠️ Tech Stack
 
-| Technology     | Use |
-|----------------|-----|
-| **Node.js**        | Backend runtime |
-| **Express.js**     | Web framework for routing |
-| **PostgreSQL**     | Database for storing users and posts |
-| **EJS**            | Server-side templating engine |
-| **Axios**          | Fetching auto-generated book covers from API |
-| **Bootstrap 5**    | Layout and responsive styling |
-| **CSS**            | Custom design and visual effects |
+| JavaScript | Node.js | Express.js | EJS |
+|-------------|----------|-------------|-----|
+| PostgreSQL | Axios | Bootstrap | CSS |
 
 ---
 
