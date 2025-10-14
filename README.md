@@ -28,7 +28,7 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 - ⭐ Sort posts by **Rating** or **Date**  
 - ✅ Clear success and error notifications  
 - 🎨 Modern UI built with **Bootstrap 5 + CSS**  
-- 🧱 Default placeholder cover when API generation is disabled  
+
 
 ---
 
