@@ -40,9 +40,24 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ## 🛠️ Tech Stack
 
-| JavaScript | Node.js | Express.js | EJS |
-|-------------|----------|-------------|-----|
-| PostgreSQL | Axios | Bootstrap | CSS |
+<table>
+  <tr>
+    <td><b>JavaScript</b></td>
+    <td><b>Node.js</b></td>
+  </tr>
+  <tr>
+    <td><b>Express.js</b></td>
+    <td><b>EJS</b></td>
+  </tr>
+  <tr>
+    <td><b>PostgreSQL</b></td>
+    <td><b>Axios</b></td>
+  </tr>
+  <tr>
+    <td><b>Bootstrap</b></td>
+    <td><b>CSS</b></td>
+  </tr>
+</table>
 
 ---
 
