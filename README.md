@@ -9,7 +9,7 @@ Users manage their posts in a private **dashboard**, while the public home page 
 ## 📘 Description
 
 **Book Note** lets readers easily document and share their reflections on books they’ve read.  
-When creating a post, users can check the **Auto-Generate Cover** option — the app will automatically fetch a book cover using the **title** and **author** via the [BookCover API](https://bookcover.longitood.com/bookcover).  
+When creating a post, users can check the **Auto-Generate Cover** option — the app will automatically fetch a book cover using the **title** and **author** via the [BookCover API](https://github.com/w3slley/bookcover-api?utm_source=chatgpt.com).  
 If the user leaves this option **unchecked**, the site will display a **default, simple book cover** (with no specific title or author) for that post instead.
 
 The app uses **PostgreSQL** to store user accounts and book notes securely, with **strong validation** and **detailed error handling** for incorrect or duplicate entries.  
