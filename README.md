@@ -19,8 +19,9 @@ It also includes **validation**, **error handling**, **success notifications**, 
 - 🧾 Create, edit, and delete book notes  
 - 🌆 Auto-generate or use default covers  
 - ⭐ Sort posts by **Rating** or **Date**  
-- ✅ Error & success notifications  
-- 🎨 Responsive Bootstrap + CSS UI  
+- ✅ Error & success notifications
+- 🎨 Custom website logo designed in Canva 
+- 🖥️ Modern UI built with Bootstrap + CSS 
 
 ---
 
