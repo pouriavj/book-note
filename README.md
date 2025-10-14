@@ -122,7 +122,7 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ---
 
-🧠 Learning Highlights
+## 🧠 Learning Highlights
 - Built a full-stack Node.js app with Express and PostgreSQL.  
 - Integrated external APIs using Axios for dynamic content.  
 - Improved error handling, input validation, and database operations.  
