@@ -52,6 +52,76 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ---
 
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/pouriavj/book-note.git
+   cd permalist
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+
+   ```
+3. **Create a PostgreSQL database:**
+   ```sql
+   CREATE DATABASE booknote;
+      \c booknote
+     -- Create SQL Table --
+       CREATE TABLE register(
+	    id SERIAL PRIMARY KEY,
+	    username VARCHAR(20) UNIQUE NOT NULL CHECK (length(btrim(username)) > 0),
+	    password VARCHAR(15) NOT NULL CHECK (length(btrim(password)) > 0)
+      );
+     CREATE TABLE posts(
+	  id SERIAL PRIMARY KEY,
+	  title VARCHAR(80) NOT NULL CHECK (length(btrim(title)) > 0),
+	  author VARCHAR(50) NOT NULL CHECK (length(btrim(author)) > 0),
+	  notes TEXT NOT NULL CHECK (length(btrim(notes)) > 0),
+	  rating TEXT NOT NULL,
+	  cover TEXT,
+	  user_id INT NOT NULL REFERENCES register(id),
+	  created_at TEXT,
+	  UNIQUE (title, author, user_id)
+    );
+
+        
+
+
+
+
+
+   ```
+4. **Update connection info in index.js:**
+   ```js
+    const db = new pg.Client({
+     user: "your-username-here",        // PostgreSQL username
+     host: "localhost",                 // Database host (usually localhost)
+     database: "booknote",             // Database name
+     password: "your-password-here",    // PostgreSQL password
+     port: 5432,                        // Database port (default PostgreSQL port)
+   });
+
+   ```
+5. **Run the app:**
+   ```bash
+   node index.js
+
+   ```
+   or, for automatic reloads during development:
+   ```bash
+   npm install -g nodemon
+   nodemon index.js
+   ```
+6. **Visit the app:**
+   ```bash
+   http://localhost:3000
+
+   ```
+
+---
+
 ## 💡 How It Works
 
 1. Users **sign up or log in** to access their personal dashboard.  
