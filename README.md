@@ -68,23 +68,25 @@ Logged-in users can manage and view their own posts, while visitors can explore 
    ```sql
    CREATE DATABASE booknote;
       \c booknote
-   	-- Create SQL Table --
+   
+   	-- Create SQL Tables --
    	CREATE TABLE register(
-	id SERIAL PRIMARY KEY,
-	username VARCHAR(20) UNIQUE NOT NULL CHECK (length(btrim(username)) > 0),
-	password VARCHAR(15) NOT NULL CHECK (length(btrim(password)) > 0)
-	);
+		id SERIAL PRIMARY KEY,
+		username VARCHAR(20) UNIQUE NOT NULL CHECK (length(btrim(username)) > 0),
+		password VARCHAR(15) NOT NULL CHECK (length(btrim(password)) > 0)
+		);
+   
    	CREATE TABLE posts(
-	id SERIAL PRIMARY KEY,
-	title VARCHAR(80) NOT NULL CHECK (length(btrim(title)) > 0),
-	author VARCHAR(50) NOT NULL CHECK (length(btrim(author)) > 0),
-	notes TEXT NOT NULL CHECK (length(btrim(notes)) > 0),
-	rating TEXT NOT NULL,
-	cover TEXT,
-	user_id INT NOT NULL REFERENCES register(id),
-	created_at TEXT,
-	UNIQUE (title, author, user_id)
-   	);
+		id SERIAL PRIMARY KEY,
+		title VARCHAR(80) NOT NULL CHECK (length(btrim(title)) > 0),
+		author VARCHAR(50) NOT NULL CHECK (length(btrim(author)) > 0),
+		notes TEXT NOT NULL CHECK (length(btrim(notes)) > 0),
+		rating TEXT NOT NULL,
+		cover TEXT,
+		user_id INT NOT NULL REFERENCES register(id),
+		created_at TEXT,
+		UNIQUE (title, author, user_id)
+   		);
    ```
 4. **Update connection info in index.js:**
    ```js
