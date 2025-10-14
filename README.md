@@ -100,12 +100,12 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 4. **Update connection info in index.js:**
    ```js
     const db = new pg.Client({
-     user: "your-username-here",        // PostgreSQL username
-     host: "localhost",                 // Database host (usually localhost)
-     database: "booknote",             	// Database name
-     password: "your-password-here",    // PostgreSQL password
-     port: 5432,                        // Database port (default PostgreSQL port)
-   });
+     	user: "your-username-here",        // PostgreSQL username
+     	host: "localhost",                 // Database host (usually localhost)
+     	database: "booknote",              // Database name
+     	password: "your-password-here",    // PostgreSQL password
+     	port: 5432,                        // Database port (default PostgreSQL port)
+   	});
 
    ```
 5. **Run the app:**
