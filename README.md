@@ -86,7 +86,7 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 		user_id INT NOT NULL REFERENCES register(id),
 		created_at TEXT,
 		UNIQUE (title, author, user_id)
-   		);
+   	);
    	```
 4. **Update connection info in index.js:**
    ```js
