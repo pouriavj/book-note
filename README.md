@@ -32,6 +32,12 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ---
 
+## 📸 Preview
+
+![Book Note Demo](./bookNote.gif)
+
+---
+
 ## 🛠️ Tech Stack
 
 | Technology     | Use |
@@ -57,11 +63,7 @@ Logged-in users can manage and view their own posts, while visitors can explore 
 
 ---
 
-## 📸 Preview
 
-_(Add screenshots or a GIF of your site in action here.)_
-
----
 
 ## 🧑‍💻 Author
 
