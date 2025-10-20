@@ -56,8 +56,8 @@ It also includes **validation**, **error handling**, **success notifications**, 
 
 > \[!WARNING\]  
 > ### Authentication
-> The current login system uses simple in-memory variables to track user sessions, which works for learning and demonstration purposes.  
-> A more secure, session-based authentication system (e.g., with Passport.js) will be implemented in a future update.
+> The current login system provides a basic first-level authentication using in-memory variables for user sessions.  
+> While it works for single users, a more secure, session-based authentication system (e.g., with Passport.js) will be implemented in a future update to support multi-user safety.
 
 ---
 
