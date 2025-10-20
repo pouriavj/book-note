@@ -55,7 +55,8 @@ It also includes **validation**, **error handling**, **success notifications**, 
 ---
 
 > \[!WARNING\]
-> ⚠️ The current login system provides a basic first-level authentication using in-memory variables for user sessions. It works for multiple users, but it is not fully secure. A more robust, session-based authentication using Passport.js and bcrypt will be implemented > in a future update.
+> The current login system provides a basic first-level authentication using in-memory variables for user sessions.  
+> It works for multiple users, but it is **not fully secure**. A more robust, session-based authentication using **Passport.js** and **bcrypt** will be implemented in a future update.
 
 ---
 
