@@ -5,6 +5,7 @@
 ![Express](https://img.shields.io/badge/Express.js-4.18-black?logo=express)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?logo=canva)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 
