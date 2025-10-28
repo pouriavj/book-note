@@ -1,5 +1,13 @@
 # 📚 Book Note
 
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-4.18-black?logo=express)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+
 **Book Note** is a full-stack web app where users can **sign up**, **log in**, and **share book reviews, ratings, and notes**.  
 Each entry can include an **auto-generated book cover** using the BookCover API, or a **default simple cover** when that option is left unchecked.  
 Users manage their posts in a personal **dashboard**, while all shared notes appear on a public home page.
